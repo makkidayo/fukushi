@@ -1,0 +1,9 @@
+<h1>エラーゼミ！！！！！！！！！！</h1>
+
+<%= link_to "新規投稿へ", new_phone_path %><br>
+
+<% @phones.each do |t| %>
+  <%= t.body %>
+  <%= t.test %>
+  <%= t.created_at %>
+<% end %>

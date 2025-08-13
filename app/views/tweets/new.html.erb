@@ -1,0 +1,42 @@
+<div class="new00">
+  <div class="new0">
+    fukushi
+  </div>
+  <div class="new1">
+    新規投稿ページ
+  </div>
+
+  <%= form_for @tweet do |f| %>
+    <div class="new2">
+      <div class="field">
+        <%= f.label :タイトル %>
+        <%= f.text_field :title, :size => 30 %>
+      </div>
+    </div>
+
+    <div class="new3">
+      <div class="field">
+        <%= f.label :感想  %>
+        <%= f.text_area :impression, :size => "30x2" %>
+      </div>
+    </div>
+    <div class="new4">
+      <div class="field">
+        <%= f.label :投稿日  %>
+        <%= f.date_field :date, :size => 30 %>
+      </div>
+    </div>
+    <div class="new6">
+      <div class="field">
+        <%= f.label :image %>
+        <%= f.file_field :image %>
+      </div>
+    </div>
+    <div class="new7">
+      <%= f.submit "投稿する" %>
+    </div>
+  <% end %>
+    <div class="new8">
+      <%= link_to "一覧に戻る", tweets_path %>
+    </div>
+</div>

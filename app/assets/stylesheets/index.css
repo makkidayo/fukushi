@@ -1,0 +1,147 @@
+.tweets-container {
+  max-width: 1000px; /* 横幅ちょっと広めに */
+  margin: 24px auto;
+  padding: 0 14px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* 最大2列 */
+  gap: 20px; /* カード間の余白 */
+}
+
+.tweet-box {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(31,53,120,0.1);
+  padding: 18px 18px 20px;
+}
+
+/* 画像 */
+.tweet-image {
+  margin: -2px;
+  margin-bottom: 16px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f1f3f7;
+}
+.tweet-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* テキスト */
+.tweet-info {
+  line-height: 1.7;
+}
+.tweet-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #1f2a37;
+}
+.tweet-title strong { display: none; }
+
+.tweet-impression {
+  margin: 0 0 16px;
+  color: #6b7280;
+  font-size: 14px;
+}
+.tweet-date,
+.tweet-user {
+  margin: 0 0 6px;
+  color: #6b7280;
+  font-size: 12.5px;
+}
+.tweet-date strong,
+.tweet-user strong { display: none; }
+
+/* アクションボタン */
+.tweet-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #2f67ff;
+  color: #fff;
+  padding: 11px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.05);
+  transition: filter 0.15s ease, transform 0.02s ease;
+}
+.btn-detail:hover { filter: brightness(.96); }
+.btn-edit {
+  text-decoration: none;
+  background: #f6f7fb;
+  border: 1px solid #e5e7eb;
+  color: #334;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-edit:hover { background: #eef1f8; }
+.btn-delete {
+  background: #fff6f6;
+  border: 1px solid #f6dada;
+  color: #d23b3b;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-delete:hover { background: #ffecec; }
+
+/* スマホ対応で1列 */
+@media (max-width: 700px) {
+  .tweets-container {
+    grid-template-columns: 1fr;
+  }
+  .tweet-image img { height: 180px; }
+  .tweet-title { font-size: 20px; }
+}
+
+/* 右下固定の投稿ボタン */
+.new-post-btn {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px)); /* iPhoneの安全域考慮 */
+  z-index: 1000;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 16px;
+
+  background: #f28c28;   /* お好みで色調整 */
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.new-post-btn:hover {
+  filter: brightness(0.98);
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+}
+
+/* スマホは少し大きめ＆タップしやすく */
+@media (max-width: 640px) {
+  .new-post-btn {
+    height: 56px;
+    padding: 0 18px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
+}

@@ -1,0 +1,10 @@
+<h1>エラーゼミ！！！！！！！！！！</h1>
+
+<%= form_for @phone do |f| %>
+  <%= f.label :body %>
+  <%= f.text_field :body %><br>
+  <%= f.label :text %>
+  <%= f.text_field :text %><br>
+  <%= f.submit "ついーとする" %>
+<% end %>
+<%= link_to "Tweet一覧に戻る", phones_path %>

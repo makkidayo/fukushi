@@ -1,0 +1,121 @@
+.topbiggest {
+  background-color: #FAF9F7;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.topbig1 {
+  background-color: black;
+  border-radius: 50px;
+  padding: 20px 40px;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.top1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.top2 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.kyoumi {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.category-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.category-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* カテゴリーのコンテナ */
+.volunteerall,
+.paraall,
+.entertainentall,
+.foodall {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 15px;
+  width: 290px; /* 各カテゴリブロックの幅を290pxに広げました */
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+/* カテゴリーのアイコン */
+.volunteer3,
+.para3,
+.entertainent3,
+.food3 {
+  margin-right: 15px;
+}
+
+.volunteer3-image,
+.para3-image,
+.entertainent3-image,
+.food3-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* 英語名と日本語名をまとめる新しいコンテナ */
+.category-text-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 170px; /* テキストグループの最小幅を170pxに広げました */
+}
+
+/* カテゴリーのテキスト */
+.volunteer1,
+.para1,
+.entertainent1,
+.food1 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.volunteer2,
+.para2,
+.entertainent2,
+.food2 {
+  font-size: 14px;
+}
+
+.wakaranai {
+  margin-top: 50px;
+  line-height: 1.6;
+}
+
+.wakaranai1,
+.wakaranai2,
+.wakaranai3,
+.wakaranai4 {
+  margin-bottom: 10px;
+}
+
+.wakaranai3 {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.wakaranai4 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #00aaff;
+}
