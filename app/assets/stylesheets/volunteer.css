@@ -1,0 +1,90 @@
+.volunteer-page {
+  background-color: #FAF9F7;
+  font-family: sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.header-sub-text {
+  font-size: 14px;
+}
+
+.header-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-image-container {
+  margin-bottom: 30px;
+}
+
+.main-image {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+.section-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 40px;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.link-section {
+  margin-bottom: 30px;
+}
+
+.link-heading {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.link-item {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.link-item a {
+  color: black;
+  text-decoration: underline;
+  word-break: break-all;
+}
+
+.footer-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 50px;
+  text-align: center;
+}

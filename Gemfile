@@ -46,7 +46,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   gem 'sqlite3' # 追加
-  #gem 'dotenv-rails' # 追加
+  gem 'dotenv-rails' # 追加
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ]
 end
@@ -74,7 +74,7 @@ gem 'sass-rails'
 gem 'devise'
 gem 'carrierwave' , '~> 1.3' ,  '>= 1.3.1'
 gem 'cloudinary', '< 2.0.0'
-gem 'dotenv-rails'
+#gem 'dotenv-rails'
 gem 'ffi'
 gem 'font-awesome-sass'
 
