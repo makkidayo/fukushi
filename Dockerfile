@@ -19,8 +19,16 @@ FROM base as build
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
-    apt-get install --no-install-recommends -y build-essential git pkg-config libpq-dev libyaml-dev && \
-    rm -rf /var/lib/apt/lists /var/cache/apt/archives
+    apt-get install --no-install-recommends -y \
+        build-essential \
+        git \
+        pkg-config \
+        libpq-dev \
+        libyaml-dev \
+        libxml2-dev \
+        libxslt1-dev \
+        zlib1g-dev && \
+    rm -rf /var/lib/apt/lists/*
 
 
 # Install application gems
