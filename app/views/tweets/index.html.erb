@@ -1,13 +1,15 @@
-<h1>fukushi</h1>
-<h3>一覧ページ</h3>
+<h1></h1>
+<h3></h3>
 
-<h3>投稿を検索</h3>
+<h3>投稿の検索</h3>
  <%= form_tag({controller:"tweets",action:"index"}, method: :get) do %>
    <%= text_field_tag :search %>
    <%= submit_tag '検索する'  %>
 <% end %>
 
 <%= link_to "新規投稿へ", new_tweet_path, class: "new-post-btn" %>
+
+<%= link_to "トップに戻る", tweets_top_path, class: "new-post-btn-top123" %>
 
 <div class="tweets-container">
   <% @tweets.each do |t| %>
@@ -30,8 +32,8 @@
 
       <div class="tweet-actions">
         <%= link_to "詳細へ", tweet_path(t.id), class: "btn-detail" %>
-        <!--<%= link_to "編集する", edit_tweet_path(t.id), class: "btn-edit" %>-->
-        <!--<%= button_to "削除する", tweet_path(t.id), method: :delete, class: "btn-delete" %>-->
+      　<%= link_to "編集する", edit_tweet_path(t.id), class: "btn-edit" %>
+        <%= button_to "削除する", tweet_path(t.id), method: :delete, class: "btn-delete" %>
       </div>
     </div>
   <% end %>

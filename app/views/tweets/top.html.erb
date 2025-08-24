@@ -1,95 +1,102 @@
 <div class="topbiggest">
-    <div class="topbig1">
-        <div class="top1">
-        障がいって
-        </div>
-        <div class="top2">
-        なんだろう
-        </div>
-    </div>
-    
-    <div class="kyoumi">
-    興味のあるところをクリック！
-    </div>
+  <div class="container">
 
-    <div class="category-grid">
-        <div class="category-row">
-            <div class="volunteerall">
-                <div class="volunteer3">
-                <%= image_tag 'ボランティアロゴ.png', class:"volunteer3-image"%>
-                </div>
-                <div class="category-text-group">
-                    <div class="volunteer1">
-        <strong>ボランティア</strong>
-                    </div>
-                    <div class="volunteer2">
-        <strong>volunteer</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="paraall">
-                <div class="para3">
-                <%= image_tag 'パラスポーツロゴ.png', class:"para3-image"%>
-                </div>
-                <div class="category-text-group">
-                    <div class="para1">
-        <strong>パラスポーツ</strong>
-                    </div>
-                   <div class="para2">
-        <strong>para sports</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="topbig1">
+      <div class="top1">福祉、</div>
+      <div class="top2">知るを楽しむ</div>
+    </div>
 
-        <div class="category-row">
-            <div class="entertainentall">
-                <div class="entertainent3">
-                <%= image_tag 'エンタメロゴ.png', class:"entertainent3-image"%>
-                </div>
-                <div class="category-text-group">
-                    <div class="entertainent1">
-        <strong>エンタメ</strong>
-                    </div>
-                    <div class="entertainent2">
-        <strong>entertainment</strong>
-                    </div>
-                </div>
-            </div>
-            <div class="foodall">
-                <div class="food3">
-                 <%= image_tag 'フード＆カフェロゴ.png', class:"food3-image"%>
-                </div>
-                <div class="category-text-group">
-                    <div class="food1">
-        <strong>フード＆カフェ</strong>
-                    </div>
-                    <div class="food2">
-        <strong>food＆cafe</strong>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="kyoumi">興味のあるところをクリック！</div>
 
-    <div class="wakaranai">
-        <div class="wakaranai1">
-        障がいや福祉ってよくわからない．．．
-        </div>
-        <div class="wakaranai2">
-        自分には関係ないし．．．
-        </div>
-        <div class="wakaranai3">
-        そんな人にこそ知ってほしい！！
-        </div>
-        <div class="wakaranai4">
-        【障がい、福祉のおもしろさがわかるサイト】
-        </div>
-        <div class="wakaranai5">
-        障がいってなんだろう？
-        </div>
-　　　　<div class="wakaranai6">
-       【障がいは個人の中ではなく、社会の中にある】
-        </div>
-    </div>
+    <%= link_to "新規投稿一覧へ", tweets_path, class: "new-post-btn-top" %>
+
+    <div class="category-grid">
+      <div class="category-row">
+        <div class="volunteerall category-card">
+          <div class="volunteer3 icon-wrap">
+            <%= image_tag 'ボランティアロゴ.png', class:"volunteer3-image" %>
+          </div>
+          <div class="category-text-group">
+            <div class="volunteer1"><%= link_to "👉ボランティア", tweets_volunteer_path %></div>
+            <div class="volunteer2"><strong>volunteer</strong></div>
+          </div>
+        </div>
+
+        <div class="paraall category-card">
+          <div class="para3 icon-wrap">
+            <%= image_tag 'パラスポーツロゴ.png', class:"para3-image" %>
+          </div>
+          <div class="category-text-group">
+            <div class="para1"><%= link_to "👉パラスポーツ", tweets_parasports_path %></div>
+            <div class="para2"><strong>para sports</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-row">
+        <div class="entertainentall category-card">
+          <div class="entertainent3 icon-wrap">
+            <%= image_tag 'エンタメロゴ.png', class:"entertainent3-image" %>
+          </div>
+          <div class="category-text-group">
+            <div class="entertainent1"><%= link_to "👉エンタメ", tweets_entertaiment_path %></div>
+            <div class="entertainent2"><strong>entertainment</strong></div>
+          </div>
+        </div>
+
+        <div class="foodall category-card">
+          <div class="food3 icon-wrap">
+            <%= image_tag 'フード＆カフェロゴ.png', class:"food3-image" %>
+          </div>
+          <div class="category-text-group">
+            <div class="food1"><%= link_to "👉フード＆カフェ", tweets_foodcafe_path %></div>
+            <div class="food2"><strong>food＆cafe</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wakaranai">
+      <div class="wakaranai1">福祉や障がいってよくわからない．．．</div>
+      <div class="wakaranai2">自分には関係ないし．．．</div>
+      <div class="wakaranai3">そんな人にこそ知ってほしい！！</div>
+      <div class="wakaranai4">【福祉、障がいのおもしろさがわかるサイト】</div>
+      <div class="wakaranai5">福祉、知るを楽しむ</div>
+      <div class="wakaranai6">【例えば、障がいは個人にあるのではなく、社会の中にある】</div>
+    </div>
+
+    <div class="model-section">
+      <div class="model-heading">医学モデルから社会モデルへ</div>
+
+      <div class="model-subheading">「医学モデルとは？」</div>
+      <div class="model-text">
+        医学モデルとは、<br>
+        障がいは個人の心身機能が原因という捉え方です。
+      </div>
+      <div class="model-example">「車いすで階段を登れない」</div>
+      <div class="model-text">
+        だから歩けるようにリハビリをする」というように<br>
+        「立って歩けないこと＝障がい」であり、<br>
+        障がいが個人の責任であるという考え方です。
+      </div>
+
+      <div class="model-subheading">「社会モデルとは？」</div>
+      <div class="model-text">
+        障がいは個人の状態と社会の在り方が合っていないことが原因という捉え方です。
+      </div>
+      <div class="model-text">
+        立って歩けないこと＝障がいではありません。<br>
+        「車いすを使っていてもエレベーターやスロープがあれば移動ができる。」
+      </div>
+      <div class="model-summary">
+        つまり「車いすで移動できない社会に<br>
+        障がいがある」<br>
+        ということになります。
+      </div>
+      <div class="model-text">
+        車いすの方でも困らずに移動できるような社会の在り方を進めていくことで、問題を取り除いていくという考え方です。
+      </div>
+    </div>
+
+  </div>
 </div>

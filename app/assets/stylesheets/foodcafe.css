@@ -1,24 +1,25 @@
 /* ===== Base ===== */
-.volunteer-page {
+.foodcafe1 {
   background-color: #FAF9F7;
   color: #111;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN",
+               "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
   padding: 24px 16px 72px;
 }
 
 /* ===== Header（左バッジ＋中央タイトル） ===== */
-.vol-header {
+.food-header {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;      /* 中央に大見出し */
+  justify-content: center;     /* 中央に大見出し */
   min-height: 60px;
   max-width: 980px;
   margin: 0 auto 20px;
 }
 
 /* 左上の小バッジ */
-.vol-badge {
+.food-badge {
   position: absolute;
   left: 8px;
   top: 8px;
@@ -27,33 +28,33 @@
   gap: 10px;
 }
 
-.vol-badge-img {
+.food-badge-img {
   width: 28px;
   height: 28px;
   object-fit: contain;
   display: block;
 }
 
-.vol-badge-text {
+.food-badge-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
 
-.vol-ja {
+.food-ja {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: .06em;
 }
 
-.vol-en {
+.food-en {
   font-size: 10px;
   opacity: .7;
   letter-spacing: .06em;
 }
 
 /* 中央の大見出し */
-.vol-title {
+.food-title {
   font-size: clamp(28px, 5.5vw, 44px);
   font-weight: 800;
   letter-spacing: .08em;
@@ -61,12 +62,12 @@
 }
 
 /* ===== Hero Image ===== */
-.vol-hero {
+.food-hero {
   max-width: 980px;
   margin: 16px auto 36px;
 }
 
-.vol-hero-img {
+.food-hero-img {
   width: 100%;
   max-width: 720px;
   height: auto;
@@ -74,68 +75,80 @@
   margin: 0 auto;
   border-radius: 6px;
   box-shadow: 0 8px 20px rgba(0,0,0,.06);
-  background: #cfe6ea; /* 読み込み中のプレース色 */
+  background: #e7efe5; /* 読み込み中の淡色 */
 }
 
-/* ===== Copy / Intro ===== */
-.vol-copy {
+/* ===== Intro Copy ===== */
+.food-intro {
   max-width: 980px;
   margin: 0 auto 28px;
   text-align: center;
 }
 
-.vol-copy-title {
+.food-intro-title {
   font-size: clamp(20px, 3vw, 26px);
   font-weight: 800;
   margin: 0 0 8px;
 }
 
-.vol-copy-sub {
+.food-intro-sub {
   font-size: clamp(15px, 2.4vw, 18px);
-  margin: 0 0 16px;
+  margin: 0;
 }
 
-.vol-copy-list-title {
+/* ===== Point box ===== */
+.food-point {
+  max-width: 720px;
+  margin: 24px auto 36px;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.food-point-title {
+  font-weight: 800;
+  margin-bottom: 8px;
+  font-size: clamp(16px, 2.6vw, 18px);
+}
+
+.food-point-desc {
+  font-size: clamp(15px, 2.4vw, 18px);
+}
+
+/* ===== Links header ===== */
+.food-links-head {
+  max-width: 980px;
+  margin: 0 auto 20px;
   font-size: clamp(18px, 2.6vw, 22px);
   font-weight: 800;
-  margin: 10px 0 0;
+  line-height: 1.6;
+  text-align: center;
 }
 
-/* ===== Links ===== */
-.vol-links {
+/* ===== Links list ===== */
+.food-links {
   max-width: 980px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* 子要素を中央寄せにする */
+  gap: 12px;
 }
 
-.vol-link-section {
-  margin: 0 auto 28px;
-  text-align: center;         /* 見出し・リンクを中央揃え */
-}
-
-.vol-link-heading {
-  font-size: clamp(18px, 2.4vw, 20px);
-  font-weight: 800;
-  margin-bottom: 10px;
-}
-
-.vol-link-item {
-  margin-bottom: 12px;
-}
-
-.vol-link-item a {
+.food-links a {
   color: #0b3a60;
   text-decoration: underline;
   text-underline-offset: 3px;
-  display: inline-block;
-  max-width: 760px;           /* 長文リンクの可読幅 */
+  display: block;        /* ブロックにして中央寄せを安定させる */
+  text-align: center;    /* テキスト自体も中央に */
+  max-width: 760px;
   word-break: break-word;
   font-size: clamp(14px, 2.2vw, 18px);
   line-height: 1.7;
 }
 
-/* ===== Optional: 大画面の左右余白を少し広げる ===== */
+/* ===== Optional: 大画面で左右余白を少し広げる ===== */
 @media (min-width: 1100px) {
-  .volunteer-page { padding-left: 48px; padding-right: 48px; }
+  .foodcafe1 { padding-left: 48px; padding-right: 48px; }
 }
 
 /* 右下固定の投稿ボタン（既存を微調整） */

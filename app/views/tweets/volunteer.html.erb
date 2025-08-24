@@ -1,57 +1,61 @@
 <div class="volunteer-page">
 
-    <div class="header">
-        <div class="header-left">
-            <img src="ボランティアロゴ.png" alt="ボランティアロゴ" class="header-logo">
-            <span class="header-sub-text">volunteer</span>
-        </div>
-        <div class="header-title">
-            ボランティア
-        </div>
+  <!-- ===== ヘッダー：左にロゴ＋2行、中央に大見出し ===== -->
+  <header class="vol-header">
+    <div class="vol-badge">
+      <div class="vol-badge-logo">
+        <%= image_tag 'ボランティアロゴ.png', class: 'vol-badge-img', alt: 'ボランティア' %>
+      </div>
+      <div class="vol-badge-text">
+        <span class="vol-ja">ボランティア</span>
+        <span class="vol-en">volunteer</span>
+      </div>
     </div>
-    
-    <div class="main-image-container">
-        <img src="volunteer-main.png" alt="Volunteer" class="main-image">
-    </div>
+    <h1 class="vol-title">ボランティア</h1>
+  </header>
 
-    <div class="section-container">
-        <div class="section-title">
-            おすすめボランティアサイト一覧
-        </div>
+  <!-- ===== ヒーロー画像 ===== -->
+  <div class="vol-hero">
+    <%= image_tag 'ボランティア画像.png', class: 'vol-hero-img', alt: 'ボランティア画像' %>
+  </div>
 
-        <div class="link-section">
-            <div class="link-heading">
-                全国で探す
-            </div>
-            <div class="link-item">
-                <a href="#">ボランティア募集情報満載！│ activo (アクティボ)</a>
-            </div>
-            <div class="link-item">
-                <a href="#">ぼ活！｜ボランティア募集やセミナー情報を掲載中｜日本財団ボランティアセンター運営</a>
-            </div>
-            <div class="link-item">
-                <a href="#">Yahoo!ボランティア - ボランティア探しはYahoo!ボランティア</a>
-            </div>
-        </div>
+  <!-- ===== コピー・導入 ===== -->
+  <section class="vol-copy">
+    <h2 class="vol-copy-title">ボランティアを探したい人必見！！</h2>
+    <p class="vol-copy-sub">はじめてのボランティアでも大丈夫</p>
+    <h3 class="vol-copy-list-title">おすすめボランティアサイト一覧</h3>
+  </section>
 
-        <div class="link-section">
-            <div class="link-heading">
-                東京専門なら
-            </div>
-            <div class="link-item">
-                <a href="#">東京ボランティアレガシーネットワーク</a>
-            </div>
-            <div class="link-item">
-                <a href="#">都内23区｜ボランティア・市民活動の総合情報サイト「ボラ市民ウェブ」</a>
-            </div>
-            <div class="link-item">
-                <a href="#">旅するボランティア｜日本財団ボランティアセンター</a>
-            </div>
-        </div>
+  <!-- ===== リンク一覧 ===== -->
+  <section class="vol-links">
+
+    <div class="vol-link-section">
+      <div class="vol-link-heading">全国で探す</div>
+      <div class="vol-link-item">
+        <a href="https://activo.jp/">ボランティア募集情報満載！│ activo (アクティボ)</a>
+      </div>
+      <div class="vol-link-item">
+        <a href="https://vokatsu.jp/">ぼ活！｜ボランティア募集やセミナー情報を掲載中｜日本財団ボランティアセンター運営</a>
+      </div>
+      <div class="vol-link-item">
+        <a href="https://volunteer.yahoo.co.jp/">Yahoo!ボランティア - ボランティア探しはYahoo!ボランティア</a>
+      </div>
     </div>
 
-    <div class="footer-title">
-        ボランティア投稿
+    <div class="vol-link-section">
+      <div class="vol-link-heading">東京専門なら</div>
+      <div class="vol-link-item">
+        <a href="https://www.tokyo-vln.jp/">東京ボランティアレガシーネットワーク</a>
+      </div>
+      <div class="vol-link-item">
+        <a href="https://www.tvac.or.jp/area/23ku/">都内23区｜ボランティア・市民活動の総合情報サイト「ボラ市民ウェブ」</a>
+      </div>
+      <div class="vol-link-item">
+        <a href="https://tabi-vo.jp/">旅するボランティア｜日本財団ボランティアセンター</a>
+      </div>
     </div>
 
+  <%= link_to "新規投稿一覧へ", tweets_path, class: "new-post-btn-top" %>
+
+  </section>
 </div>

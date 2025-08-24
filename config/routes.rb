@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'tweets/top' => 'tweets#top'
   get 'tweets/search' => 'tweets#search'
   get 'tweets/volunteer' => 'tweets#volunteer'
+  get 'tweets/foodcafe' => 'tweets#foodcafe'
+  get 'tweets/parasports' => 'tweets#parasports'
+  get 'tweets/entertaiment' => 'entertaiment'
   root 'tweets#index'
   devise_for:users
   resources :tweets do

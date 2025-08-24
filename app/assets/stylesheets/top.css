@@ -1,121 +1,222 @@
+/* ページ全体 */
 .topbiggest {
   background-color: #FAF9F7;
   font-family: sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 48px 20px 120px; /* 右下固定ボタン分の下余白を広めに */
   text-align: center;
-  padding: 50px 20px;
-  display: flex;
+}
+
+/* ヒーロー */
+.topbig1 {
+  background-color: #BDA473;
+  border-radius: 32px;
+  padding: 20px 32px;
+  margin: 0 auto 28px;
+  color: #fff;
+  display: inline-flex;
   flex-direction: column;
   align-items: center;
+  gap: 4px;
 }
 
-.topbig1 {
-  background-color: black;
-  border-radius: 50px;
-  padding: 20px 40px;
-  margin-bottom: 50px;
-  color: white;
-}
-
-.top1 {
-  font-size: 32px;
-  font-weight: bold;
-}
-
+.top1,
 .top2 {
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 800;
+  letter-spacing: .02em;
+  line-height: 1.1;
 }
 
 .kyoumi {
-  font-size: 20px;
-  margin-bottom: 30px;
+  font-size: 18px;
+  margin: 8px 0 28px;
 }
 
+/* グリッド：スマホ1列／タブレット2列／広い画面2列固定 */
 .category-grid {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
   gap: 20px;
-}
-
-.category-row {
-  display: flex;
   justify-content: center;
-  gap: 20px;
 }
 
-/* カテゴリーのコンテナ */
+/* .category-row は見た目に影響させない（既存HTML互換） */
+.category-row {
+  display: contents;
+}
+
+/* 各カード */
+.category-card,
 .volunteerall,
 .paraall,
 .entertainentall,
 .foodall {
-  background-color: white;
-  color: black;
-  border-radius: 10px;
-  padding: 15px;
-  width: 290px; /* 各カテゴリブロックの幅を290pxに広げました */
-  display: flex;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 16px 18px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
   align-items: center;
+  gap: 14px;
+  min-height: 84px;         /* 高さをそろえる */
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
   text-align: left;
 }
 
-/* カテゴリーのアイコン */
+/* アイコン */
+.icon-wrap,
 .volunteer3,
 .para3,
 .entertainent3,
 .food3 {
-  margin-right: 15px;
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
 }
 
 .volunteer3-image,
 .para3-image,
 .entertainent3-image,
 .food3-image {
-  width: 50px;
-  height: 50px;
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  display: block;
 }
 
-/* 英語名と日本語名をまとめる新しいコンテナ */
+/* テキスト縦積み */
 .category-text-group {
   display: flex;
   flex-direction: column;
-  min-width: 170px; /* テキストグループの最小幅を170pxに広げました */
+  gap: 4px;
+  min-width: 0;
 }
 
-/* カテゴリーのテキスト */
+/* 日本語リンク */
 .volunteer1,
 .para1,
 .entertainent1,
 .food1 {
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
+/* 英語小見出し */
 .volunteer2,
 .para2,
 .entertainent2,
 .food2 {
-  font-size: 14px;
+  font-size: 13px;
+  opacity: .8;
 }
 
+/* 下部テキスト群 */
 .wakaranai {
-  margin-top: 50px;
-  line-height: 1.6;
+  margin-top: 48px;
+  line-height: 1.75;
 }
 
-.wakaranai1,
-.wakaranai2,
-.wakaranai3,
-.wakaranai4 {
-  margin-bottom: 10px;
+.wakaranai > div {
+  margin-bottom: 8px;
 }
 
 .wakaranai3 {
-  font-weight: bold;
+  font-weight: 800;
   font-size: 20px;
 }
 
 .wakaranai4 {
-  font-weight: bold;
+  font-weight: 800;
   font-size: 20px;
-  color: #00aaff;
+  color: #7390BD;
+}
+
+/* 説明セクション */
+.model-section {
+  max-width: 720px;
+  margin: 40px auto 0;
+  text-align: left;
+  line-height: 1.8;
+  padding: 0 4px;
+}
+
+.model-heading {
+  font-size: 22px;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.model-subheading {
+  font-size: 16px;
+  font-weight: 800;
+  margin: 18px 0 8px;
+}
+
+.model-text {
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.model-example {
+  text-align: center;
+  font-style: italic;
+  font-weight: 800;
+  margin: 18px 0;
+}
+
+.model-summary {
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.6;
+  margin: 22px 0;
+}
+
+/* 右下固定の投稿ボタン（既存を微調整） */
+.new-post-btn-top {
+  position: fixed;
+  right: 20px;
+  bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+  z-index: 1000;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  padding: 0 16px;
+  background: #f28c28;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+  cursor: pointer;
+  transition: transform .05s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.new-post-btn-top:hover { filter: brightness(0.98); box-shadow: 0 8px 24px rgba(0,0,0,.18); }
+
+/* レスポンシブ */
+@media (max-width: 860px) {
+  .category-grid {
+    grid-template-columns: 1fr; /* スマホ〜タブレットで1列 */
+  }
+  .top1, .top2 { font-size: 28px; }
+}
+
+@media (max-width: 640px) {
+  .new-post-btn-top {
+    height: 56px;
+    padding: 0 18px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom, 0px));
+  }
 }

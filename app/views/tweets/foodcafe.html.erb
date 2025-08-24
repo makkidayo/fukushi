@@ -1,0 +1,52 @@
+<div class="foodcafe1">
+  <!-- ===== ヘッダー：左にロゴ＋2行、中央に大見出し ===== -->
+  <header class="food-header">
+    <div class="food-badge">
+      <div class="food-badge-logo">
+        <%= image_tag 'フード＆カフェロゴ.png', class: 'food-badge-img', alt: 'フード＆カフェ' %>
+      </div>
+      <div class="food-badge-text">
+        <span class="food-ja">フード＆カフェ</span>
+        <span class="food-en">food & cafe</span>
+      </div>
+    </div>
+    <h1 class="food-title">フード＆カフェ</h1>
+  </header>
+
+  <!-- ===== ヒーロー画像 ===== -->
+  <div class="food-hero">
+    <%= image_tag 'フードカフェ.png', class: 'food-hero-img', alt: 'フード＆カフェ メイン画像' %>
+  </div>
+
+  <!-- ===== 導入コピー ===== -->
+  <section class="food-intro">
+    <h2 class="food-intro-title">福祉と食べ物、カフェのかかわり</h2>
+    <p class="food-intro-sub">全国には就労支援事業所などが運営している飲食店がたくさんあるんです！</p>
+  </section>
+
+  <!-- ===== ポイント説明 ===== -->
+  <section class="food-point">
+    <div class="food-point-title">○ 就労支援事業所とは？</div>
+    <div class="food-point-desc">
+      → 一般就労に不安のある方が<br>
+      自分のペースで働くことができる場所です！
+    </div>
+  </section>
+
+  <!-- ===== まとめ/リンク見出し ===== -->
+  <section class="food-links-head">
+    カフェやご飯屋さんを<br>
+    探すには<br>
+    まとめサイト一覧
+  </section>
+
+　<%= link_to "新規投稿一覧へ", tweets_path, class: "new-post-btn-top" %>
+
+  <!-- ===== リンク一覧 ===== -->
+  <section class="food-links">
+    <a href="https://xn--jgrr4tei44x8qbc75m.com/cafe/">カフェ・飲食店を営む就労継続支援A型B型事業所</a>
+    <a href="https://xn--jgrr4tei44x8qbc75m.com/cafe/">【60選】 -ぎふ就労支援センター</a>
+    <a href="https://xn--jgrr4tei44x8qbc75m.com/cafe/">岐阜市指定障害福祉サービス就労継続支援A型事業所</a>
+    <a href="https://tabelog.com/matome/12943/?msockid=1a73383c694c6b2707eb2b1a68346a97">社会福祉事業による食堂【就労継続支援など】｜食べログまとめ</a>
+  </section>
+</div>

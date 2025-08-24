@@ -1,0 +1,84 @@
+/* フォーム全体の設定 */
+.signup-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333333;
+}
+
+/* タイトルとリンク */
+h2 {
+  text-align: center;
+  color: #555555;
+  margin-bottom: 25px;
+}
+
+.shared-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* 各フォームフィールド */
+.field {
+  margin-bottom: 20px;
+}
+
+.field label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #666666;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  color: #444444;
+  box-sizing: border-box;
+}
+
+/* ボタン */
+.actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.actions input[type="submit"] {
+  background-color: #8cbaa5; /* 落ち着いた緑色 */
+  color: #ffffff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: #7a9c8d; /* ホバー時の色 */
+}
+
+/* エラーメッセージ */
+.error-messages {
+  color: #d9534f;
+  background-color: #f2dede;
+  border: 1px solid #ebccd1;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+/* 背景色 */
+body {
+  background-color: #faf9f7;
+}

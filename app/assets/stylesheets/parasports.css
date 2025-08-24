@@ -1,141 +1,131 @@
 /* ===== Base ===== */
-.volunteer-page {
+.parasports1 {
   background-color: #FAF9F7;
-  color: #111;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
-  padding: 24px 16px 72px;
+  color: #111;
+  padding: 24px 16px 56px;
 }
 
-/* ===== Header（左バッジ＋中央タイトル） ===== */
-.vol-header {
+/* ===== Top Header ===== */
+.ps-header {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;      /* 中央に大見出し */
-  min-height: 60px;
+  justify-content: center; /* 中央に大見出し */
   max-width: 980px;
-  margin: 0 auto 20px;
+  margin: 0 auto 24px;
+  min-height: 56px;
 }
 
-/* 左上の小バッジ */
-.vol-badge {
+/* 左上の小さなロゴ＋2行テキスト */
+.ps-badge {
   position: absolute;
   left: 8px;
-  top: 8px;
+  top: 6px;
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.vol-badge-img {
+.ps-logo-img {
   width: 28px;
   height: 28px;
   object-fit: contain;
   display: block;
 }
 
-.vol-badge-text {
+.ps-badge-text {
   display: flex;
   flex-direction: column;
   line-height: 1.1;
 }
 
-.vol-ja {
+.ps-ja {
   font-size: 14px;
   font-weight: 700;
-  letter-spacing: .06em;
+  letter-spacing: 0.06em;
 }
 
-.vol-en {
+.ps-en {
   font-size: 10px;
-  opacity: .7;
-  letter-spacing: .06em;
+  opacity: 0.7;
+  letter-spacing: 0.06em;
 }
 
 /* 中央の大見出し */
-.vol-title {
+.ps-title {
   font-size: clamp(28px, 5.5vw, 44px);
   font-weight: 800;
-  letter-spacing: .08em;
+  letter-spacing: 0.08em;
   margin: 8px 0 0;
 }
 
 /* ===== Hero Image ===== */
-.vol-hero {
+.ps-hero {
   max-width: 980px;
-  margin: 16px auto 36px;
+  margin: 16px auto 40px;
 }
 
-.vol-hero-img {
+.ps-hero-img {
   width: 100%;
-  max-width: 720px;
   height: auto;
   display: block;
-  margin: 0 auto;
   border-radius: 6px;
-  box-shadow: 0 8px 20px rgba(0,0,0,.06);
-  background: #cfe6ea; /* 読み込み中のプレース色 */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  background: #cfe6ea; /* 読み込み中も淡い色で埋める */
 }
 
-/* ===== Copy / Intro ===== */
-.vol-copy {
+/* ===== Existing content (調整だけ) ===== */
+.parasports-catchcopy {
   max-width: 980px;
-  margin: 0 auto 28px;
-  text-align: center;
+  margin: 0 auto 48px;
+  font-size: clamp(18px, 2.6vw, 24px);
+  font-weight: 700;
+  line-height: 1.8;
+  text-align: center;   /* ← 左揃えから中央揃えに変更 */
 }
-
-.vol-copy-title {
-  font-size: clamp(20px, 3vw, 26px);
-  font-weight: 800;
-  margin: 0 0 8px;
-}
-
-.vol-copy-sub {
-  font-size: clamp(15px, 2.4vw, 18px);
-  margin: 0 0 16px;
-}
-
-.vol-copy-list-title {
-  font-size: clamp(18px, 2.6vw, 22px);
-  font-weight: 800;
-  margin: 10px 0 0;
-}
-
-/* ===== Links ===== */
-.vol-links {
+.parasports9 {
   max-width: 980px;
-  margin: 0 auto;
-}
-
-.vol-link-section {
-  margin: 0 auto 28px;
-  text-align: center;         /* 見出し・リンクを中央揃え */
-}
-
-.vol-link-heading {
-  font-size: clamp(18px, 2.4vw, 20px);
+  margin: 0 auto 20px;
+  font-size: clamp(20px, 2.8vw, 24px);
   font-weight: 800;
-  margin-bottom: 10px;
+  text-align: left;
 }
 
-.vol-link-item {
-  margin-bottom: 12px;
+.parasports9,
+.parasports10,
+.parasports11,
+.parasports12,
+.parasports13,
+.parasports-footer-text {
+  max-width: 980px;
+  margin: 0 auto 20px;
+  text-align: center;   /* ← 中央寄せに変更 */
 }
 
-.vol-link-item a {
+.parasports10 a,
+.parasports11 a,
+.parasports12 a,
+.parasports13 a {
   color: #0b3a60;
   text-decoration: underline;
   text-underline-offset: 3px;
-  display: inline-block;
-  max-width: 760px;           /* 長文リンクの可読幅 */
   word-break: break-word;
   font-size: clamp(14px, 2.2vw, 18px);
-  line-height: 1.7;
 }
 
-/* ===== Optional: 大画面の左右余白を少し広げる ===== */
+.parasports-footer-text {
+  max-width: 980px;
+  margin: 40px auto 0;
+  font-size: 16px;
+  line-height: 1.7;
+  text-align: center;
+  opacity: 0.9;
+}
+
+/* ===== Optional: 大きい画面で左右の余白を広げる ===== */
 @media (min-width: 1100px) {
-  .volunteer-page { padding-left: 48px; padding-right: 48px; }
+  .parasports1 { padding-left: 48px; padding-right: 48px; }
 }
 
 /* 右下固定の投稿ボタン（既存を微調整） */
